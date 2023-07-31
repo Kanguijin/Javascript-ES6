@@ -1,0 +1,36 @@
+<div></div>
+<script>
+    // var 변수 = '손흥민';
+    // var 문자 = `안녕하세요 저는 ${ 변수 } 입니다`;
+
+    // function 해체분석기(문자들,변수들) {
+    //     console.log(문자들[1] + 변수들 +문자들[0]);
+    // }
+
+    // 해체분석기`안녕하세요 저는 ${ 변수 } 입니다`
+
+    // var pants = 20;
+    // var socks = 100;
+    // `바지${pants} 양말${socks}`;
+
+    // function 해체분석기(문자들, 변수들, 변수들2) {
+    //     console.log(문자들[1] + 변수들 + 문자들[0]+변수들2)
+    // }
+    // 해체분석기`바지${pants} 양말${socks}`;
+
+    var pants = 1;
+    var socks = 100;
+    `바지${pants} 양말${socks}`;
+
+    function 해체분석기 (문자들, 변수들1, 변수들2) {
+        if(변수들1 === 0 ) {
+            console.log(`바지안팔아요 양말` + 변수들2)
+        } else {
+            console.log(문자들[0]+변수들1+문자들[1]+변수들2)
+        }
+    }
+        
+    해체분석기`바지${pants} 양말${socks}`;
+
+
+</script>
