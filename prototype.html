@@ -1,0 +1,52 @@
+<div></div>
+<script>
+
+    function 기계(이름) {
+        this.name = 이름;
+        this.age = 15;
+        this.sayHi = function () {
+            console.log('안녕하세요' + this.name + '입니다' );
+        }
+    }
+
+    기계.prototype.gender = '남'; 
+
+    var 학생1 = new 기계('Kim');
+    var 학생2 = new 기계('Park');
+
+    // var arr = [1,2,3];
+    // var arr = new Array(1,2,3);
+    var obj = { name : 'Kim' };
+    var obj = new Object();
+
+    var 부모 = { name : 'Kim'};
+    var 자식 = {};
+    자식.__proto__ = 부모;
+
+    // 연습문제
+
+    function Student(이름, 나이) {
+        this.name = 이름;
+        this.age = 나이;
+    }
+    // this가 window를 지칭 
+    // Student.prototype.sayHi = () => {
+    //     console.log(this);
+    // }
+
+    var student1 = new Student('Kim', 20);
+    
+    // student1.sayHi();
+
+    Array.prototype.remove3 = function (a) {
+        for(var i = 0; i < this.length; i++) {
+            if(this[i]===a) {
+                this.splice(i, 1);
+            }
+        }
+    };
+    var arr = [1,2,3,4,5];
+    arr.remove3(2);
+    console.log(arr);
+
+</script>
