@@ -1,0 +1,17 @@
+<script>
+    console.log(1);
+    // setTimeout(()=>{ console.log(2) }, 1000);
+    // addEventListener('click', 함수);
+
+    function 첫째함수(구멍) {
+        console.log(1);
+        구멍();
+    }
+
+    function 둘째함수() {
+        console.log(2);
+    }
+
+    첫째함수(둘째함수);
+
+</script>
