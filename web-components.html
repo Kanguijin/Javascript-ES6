@@ -1,0 +1,26 @@
+<body>
+    <custom-input name="123"></custom-input>
+    <custom-input></custom-input>
+
+<script>
+
+    class 클래스 extends HTMLElement {
+        connectedCallback(){
+        //    let 변수 = document.createElement('label');
+        //    this.appendChild(변수);
+            // let name = this.getAttribute('name');
+            // this.innerHTML = `<label>${name}인풋이에요</label><input>`;
+            this.innerHTML = `<label>이메일인풋이에요</label><input>`;
+        }
+        static get observedAttributes() {
+            return ['name']
+        }
+        attributeChangedCallback(){
+            console.log(this.getAttribute('name'));
+        }
+    }
+
+    customElements.define('custom-input', 클래스);
+
+
+</script>
